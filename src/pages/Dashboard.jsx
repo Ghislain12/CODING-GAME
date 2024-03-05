@@ -16,7 +16,7 @@ const Dashboard = () => {
 		axios
 			.get("https://jsonplaceholder.typicode.com/albums")
 			.then((res) => setAlbums(res.data))
-			.catch((err) => sendNotify("err", "Une erreur est survenue", err));
+			.catch((err) => sendNotify("error", "Une erreur est survenue", err.message));
 	}, []);
 	const filteredAlbum = () =>
 		albums?.filter((e) => e.title.toLowerCase().includes(query.toLowerCase()));
