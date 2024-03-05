@@ -14,7 +14,7 @@ const Dashboard = () => {
 	};
 	useEffect(() => {
 		axios
-			.get("https://jsonplaceholder.typicode.com/albumsn")
+			.get("https://jsonplaceholder.typicode.com/albums")
 			.then((res) => setAlbums(res.data))
 			.catch((err) => sendNotify("err", "Une erreur est survenue", err));
 	}, []);
